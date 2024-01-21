@@ -6,7 +6,7 @@
 
 {% block content %}
 <h1>Homepage</h1>
-{% if user.is_authenticated %}
-   <p>Hi {{ user.email }}!</p>
-{% endif %}
+<form action="{% url 'search_results' %}" class="form-inline mt-2 mt-md-0" method="get">
+   <input name="q" type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+</form>
 {% endblock content %}
